@@ -8,7 +8,7 @@ export const config = {
 }
 
 export async function getServerSideProps() {
-  const result = await fetch('http://localhost:5000/api/graphql', {
+  const result = await fetch(`${process.env.HOST}/api/graphql`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
